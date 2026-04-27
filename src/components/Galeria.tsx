@@ -8,10 +8,10 @@ type MediaItem = {
 };
 
 const mediaItems: MediaItem[] = [
-  { id: 1, label: 'Fachada do prédio', tag: 'VÍDEO', src: '/videos/fachada-predio.mp4' },
-  { id: 2, label: 'Térreo', tag: 'VÍDEO', src: '/videos/terreo.mp4' },
-  { id: 3, label: 'Escada interna', tag: 'VÍDEO', src: '/videos/escada.mp4' },
-  { id: 4, label: 'Sala comercial 104', tag: 'VÍDEO', src: '/videos/sala-comercial-104.mp4' },
+  { id: 1, label: 'Fachada do prédio', tag: 'VÍDEO', src: `${import.meta.env.BASE_URL}videos/fachada-predio.mp4` },
+  { id: 2, label: 'Térreo', tag: 'VÍDEO', src: `${import.meta.env.BASE_URL}videos/terreo.mp4` },
+  { id: 3, label: 'Escada interna', tag: 'VÍDEO', src: `${import.meta.env.BASE_URL}videos/escada.mp4` },
+  { id: 4, label: 'Sala comercial 104', tag: 'VÍDEO', src: `${import.meta.env.BASE_URL}videos/sala-comercial-104.mp4` },
 ];
 
 export default function Galeria() {
