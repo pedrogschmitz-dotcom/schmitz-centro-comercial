@@ -16,12 +16,12 @@ export default function Hero() {
         loop
         playsInline
         preload="auto"
-        poster={`${import.meta.env.BASE_URL}images/fachada.jpeg`}
+         poster="./images/fachada.jpeg"
         style={{
           opacity: isLogoHovered ? 1 : 0.45,
           transition: 'opacity 0.28s ease',
         }}
-        src={`${import.meta.env.BASE_URL}videos/fachada-predio-boomerang.mp4`}
+         src="./videos/fachada-predio-boomerang.mp4"
       />
 
       <div
