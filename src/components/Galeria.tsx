@@ -5,13 +5,14 @@ type MediaItem = {
   label: string;
   tag: string;
   src: string;
+  poster: string;
 };
 
 const mediaItems: MediaItem[] = [
-  { id: 1, label: 'Fachada do prédio', tag: 'VÍDEO', src: './videos/fachada-predio.mp4' },
-  { id: 2, label: 'Térreo', tag: 'VÍDEO', src: './videos/terreo.mp4' },
-  { id: 3, label: 'Escada interna', tag: 'VÍDEO', src: './videos/escada.mp4' },
-  { id: 4, label: 'Sala comercial 104', tag: 'VÍDEO', src: './videos/sala-comercial-104.mp4' },
+  { id: 1, label: 'Fachada do prédio', tag: 'VÍDEO', src: './videos/fachada-predio.mp4', poster: './fachada.jpeg' },
+  { id: 2, label: 'Térreo', tag: 'VÍDEO', src: './videos/terreo.mp4', poster: './fachada.jpeg' },
+  { id: 3, label: 'Escada interna', tag: 'VÍDEO', src: './videos/escada.mp4', poster: './fachada.jpeg' },
+  { id: 4, label: 'Sala comercial 104', tag: 'VÍDEO', src: './videos/sala-comercial-104.mp4', poster: './fachada.jpeg' },
 ];
 
 export default function Galeria() {
@@ -137,13 +138,19 @@ export default function Galeria() {
               >
                 {failedIds.includes(item.id) ? (
                   <div
-                    className="w-full h-full flex items-center justify-center px-6 text-center"
-                    style={{ background: 'linear-gradient(145deg, #561525 0%, #3d0e19 100%)' }}
+                    className="w-full h-full relative"
+                    style={{ background: '#2a0a13' }}
                   >
-                    <p className="font-sans text-[11px] leading-relaxed" style={{ color: 'rgba(240,228,204,0.9)' }}>
-                      Este video .MOV nao abriu neste navegador.<br />
-                      Se quiser, eu converto para .mp4 e fica 100% compativel.
-                    </p>
+                    <img
+                      src={item.poster}
+                      alt={item.label}
+                      className="w-full h-full object-cover opacity-60"
+                    />
+                    <div className="absolute inset-0 flex items-end justify-center pb-10 px-4 text-center">
+                      <p className="font-sans text-[11px] leading-relaxed" style={{ color: 'rgba(240,228,204,0.9)' }}>
+                        Vídeo não disponível no momento
+                      </p>
+                    </div>
                   </div>
                 ) : (
                   <video
@@ -154,6 +161,7 @@ export default function Galeria() {
                     playsInline
                     preload="metadata"
                     src={item.src}
+                    poster={item.poster}
                     onError={() => {
                       setFailedIds((prev) => (prev.includes(item.id) ? prev : [...prev, item.id]));
                     }}

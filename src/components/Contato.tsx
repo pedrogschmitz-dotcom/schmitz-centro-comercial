@@ -184,6 +184,29 @@ export default function Contato() {
           >
             (48) 98468-0088
           </a>
+          <div className="flex items-center justify-center gap-4 mt-2">
+            <a
+              href="tel:+5548984680088"
+              className="font-sans text-[10px] uppercase tracking-widest"
+              style={{ color: 'rgba(240,228,204,0.45)' }}
+              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#C9A84C')}
+              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'rgba(240,228,204,0.45)')}
+            >
+              Ligar
+            </a>
+            <span style={{ color: 'rgba(240,228,204,0.2)' }}>·</span>
+            <a
+              href="https://wa.me/5548984680088"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans text-[10px] uppercase tracking-widest"
+              style={{ color: 'rgba(240,228,204,0.45)' }}
+              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#25D366')}
+              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'rgba(240,228,204,0.45)')}
+            >
+              WhatsApp
+            </a>
+          </div>
           <p className="font-sans text-[10px] mt-1" style={{ color: 'rgba(240,228,204,0.4)' }}>
             Av. Delamar José da Silva, 85 · Kobrasol · São José/SC
           </p>
