@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pedrogschmitz-dotcom.github.io/schmitz-centro-comercial/sitemap.xml
