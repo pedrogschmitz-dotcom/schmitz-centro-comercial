@@ -1,9 +1,35 @@
+import { useEffect, useRef, useState } from 'react';
+
 export default function Localizacao() {
   const endereco = 'Av. Delamar Jose da Silva, 85 - Kobrasol, Sao Jose - SC, 88102-101';
   const mapsUrl =
     `https://maps.google.com/maps?q=${encodeURIComponent(endereco)}&t=&z=17&ie=UTF8&iwloc=&output=embed`;
   const mapsDirectUrl =
     `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(endereco)}`;
+  const infoColumnRef = useRef<HTMLDivElement | null>(null);
+  const [mapHeight, setMapHeight] = useState<number>(420);
+
+  useEffect(() => {
+    const updateHeight = () => {
+      if (!infoColumnRef.current) return;
+      if (window.innerWidth < 1024) {
+        setMapHeight(420);
+        return;
+      }
+      setMapHeight(Math.ceil(infoColumnRef.current.getBoundingClientRect().height));
+    };
+
+    updateHeight();
+
+    const observer = new ResizeObserver(updateHeight);
+    if (infoColumnRef.current) observer.observe(infoColumnRef.current);
+    window.addEventListener('resize', updateHeight);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', updateHeight);
+    };
+  }, []);
 
   return (
     <section
@@ -22,9 +48,9 @@ export default function Localizacao() {
           <hr className="gold-divider max-w-[200px] mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Info */}
-          <div className="lg:col-span-1 space-y-4">
+          <div ref={infoColumnRef} className="lg:col-span-1 space-y-4">
             {/* Placa endereço */}
             <div
               className="paper-card rounded-sm px-6 py-6"
@@ -85,6 +111,7 @@ export default function Localizacao() {
           <div
             className="lg:col-span-2 rounded-sm overflow-hidden"
             style={{
+              height: `${mapHeight}px`,
               boxShadow: '0 4px 8px rgba(0,0,0,0.15), 0 16px 40px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.4)',
               border: '3px solid rgba(255,255,255,0.8)',
               outline: '1px solid rgba(0,0,0,0.1)',
@@ -94,7 +121,7 @@ export default function Localizacao() {
               title="Mapa Centro Comercial Schmitz"
               src={mapsUrl}
               width="100%"
-              height="420"
+              height="100%"
               style={{ border: 0, display: 'block' }}
               allowFullScreen
               loading="lazy"

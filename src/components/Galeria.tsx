@@ -152,7 +152,7 @@ export default function Galeria() {
                       </p>
                     </div>
                   </div>
-                ) : isCurrent ? (
+                ) : isCurrent || isPrev || isNext ? (
                   <video
                     className="w-full h-full object-cover"
                     autoPlay
