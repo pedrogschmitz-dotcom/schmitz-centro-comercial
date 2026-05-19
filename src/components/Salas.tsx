@@ -6,33 +6,55 @@ interface Room {
   features: string[];
   highlight?: string;
   available: boolean;
+  whatsappText: string;
 }
 
 const rooms: Room[] = [
   {
-    id: 'S-001',
+    id: 'S-104',
     floor: 'Térreo',
-    area: '100 m²',
-    type: 'Sala de frente',
-    features: ['Banheiro privativo', 'Alta visibilidade', 'Fácil acesso', 'Alvarás em dia'],
+    area: '35 m²',
+    type: 'Sala térrea',
+    features: [
+      'Banheiro privativo',
+      'Visibilidade de rua',
+      'Fácil acesso',
+      'Condôminio, IPTU e água inclusos',
+    ],
     highlight: 'DESTAQUE',
     available: true,
+    whatsappText:
+      'Olá, tenho interesse na Sala S-104 (Térreo, 35 m²) e gostaria de agendar uma visita.',
   },
   {
-    id: 'S-100',
-    floor: '1º Andar',
-    area: '35–40 m²',
-    type: 'Sala comercial',
-    features: ['Banheiro privativo', 'Ambiente arejado', 'Iluminação moderna', 'Alvarás em dia'],
-    available: true,
-  },
-  {
-    id: 'S-200',
+    id: 'S-2A',
     floor: '2º Andar',
     area: '35–40 m²',
     type: 'Sala comercial',
-    features: ['Banheiro privativo', 'Ambiente tranquilo', 'Iluminação natural', 'Alvarás em dia'],
+    features: [
+      'Banheiro privativo',
+      'Ambiente arejado e iluminado',
+      'Ideal para consultório ou escritório',
+      'Condôminio, IPTU e água inclusos',
+    ],
     available: true,
+    whatsappText:
+      'Olá, tenho interesse na Sala S-2A (2º Andar, 35–40 m²) e gostaria de agendar uma visita.',
+  },
+  {
+    id: 'S-3A',
+    floor: '3º Andar',
+    area: '35–40 m²',
+    type: 'Sala comercial',
+    features: [
+      'Banheiro privativo',
+      'Ambiente tranquilo',
+      'Iluminação natural',
+      'Condôminio, IPTU e água inclusos',
+    ],
+    available: true,
+    whatsappText:
+      'Olá, tenho interesse na Sala S-3A (3º Andar, 35–40 m²) e gostaria de agendar uma visita.',
   },
   {
     id: 'S-ATI',
@@ -43,10 +65,12 @@ const rooms: Room[] = [
       'Espaço amplo e versátil',
       'Ideal para clínica, academia ou escola',
       'Vistas privilegiadas',
-      'Alvarás em dia',
+      'Condôminio, IPTU e água inclusos',
     ],
     highlight: 'ÁTICO',
     available: true,
+    whatsappText:
+      'Olá, tenho interesse no Ático (4º Andar, 200+ m²) e gostaria de agendar uma visita.',
   },
 ];
 
@@ -195,7 +219,7 @@ function RoomCard({ room }: { room: Room }) {
         </ul>
         <hr className="gold-divider mb-4" />
         <a
-          href={`https://wa.me/5548984680088?text=Olá,%20tenho%20interesse%20na%20sala%20${room.id}%20(${room.floor})%20e%20gostaria%20de%20agendar%20uma%20visita`}
+          href={`https://wa.me/5548984680088?text=${encodeURIComponent(room.whatsappText)}`}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-emboss block w-full text-center text-white font-sans text-[11px] uppercase tracking-widest py-3 rounded-sm"

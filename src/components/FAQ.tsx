@@ -2,27 +2,42 @@ const faqItems = [
   {
     question: 'Onde fica o Centro Comercial Schmitz?',
     answer:
-      'Na Av. Delamar José da Silva, 85, Kobrasol, São José/SC, CEP 88102-101. O endereço fica em uma região de alto fluxo e fácil acesso.',
+      'Na Av. Delamar José da Silva, 85, Kobrasol, São José/SC, CEP 88102-101. Kobrasol é o principal centro comercial de São José, com fácil acesso por ônibus e próximo à Grande Florianópolis.',
+  },
+  {
+    question: 'O aluguel é direto com o proprietário?',
+    answer:
+      'Sim. O aluguel no Centro Comercial Schmitz é direto com o proprietário, sem intermediação de imobiliária. Isso garante mais flexibilidade, agilidade e relação direta com a gestão familiar do prédio.',
+  },
+  {
+    question: 'O que está incluído no valor do aluguel?',
+    answer:
+      'O valor mensal inclui o aluguel da sala, o condomínio e o IPTU. A água também está incluída. O locatário paga apenas a energia elétrica da sua sala.',
   },
   {
     question: 'Quais tamanhos de salas estão disponíveis?',
     answer:
-      'Há salas padrão entre 35 e 40 m², sala térrea com cerca de 100 m² e ático com mais de 200 m², conforme disponibilidade no momento.',
+      'Há salas padrão de 35 a 40 m² com banheiro privativo, salas no térreo com maior visibilidade, e um ático com mais de 200 m² para locação como espaço único. Consulte a disponibilidade atual pelo WhatsApp.',
   },
   {
-    question: 'As salas têm banheiro privativo?',
+    question: 'O prédio tem elevador?',
     answer:
-      'Sim. As unidades contam com banheiro privativo, trazendo mais conforto para profissionais e clientes.',
+      'O prédio não possui elevador. As salas estão distribuídas em térreo, 1º, 2º e 3º andares, além de ático. Para quem necessita de acesso facilitado, indicamos as salas do térreo.',
+  },
+  {
+    question: 'Quais tipos de negócios funcionam no prédio?',
+    answer:
+      'O Centro Comercial Schmitz tem um mix diversificado: ótica, salão de beleza, manicure, estúdio fotográfico, brechó, escritório de advocacia e outros profissionais liberais.',
   },
   {
     question: 'Como agendar uma visita?',
     answer:
-      'Você pode falar direto pelo WhatsApp no número (48) 98468-0088 e agendar uma visita sem compromisso.',
+      'Basta entrar em contato pelo WhatsApp (48) 98468-0088. As visitas são agendadas de segunda a sexta das 8h às 18h e sábados das 8h às 12h, sem compromisso.',
   },
   {
-    question: 'O centro comercial é regularizado?',
+    question: 'O prédio tem estacionamento?',
     answer:
-      'Sim. O edifício trabalha com documentação e alvarás em dia para oferecer segurança ao locatário.',
+      'O prédio não possui estacionamento próprio. No entanto, há estacionamentos rotativos próximos e a localização central facilita o acesso a pé e por transporte público.',
   },
 ];
 

@@ -1,8 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Hero() {
   const [isLogoHovered, setIsLogoHovered] = useState(false);
   const [isSecondaryHovered, setIsSecondaryHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 768px)');
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
 
   return (
     <section
@@ -10,20 +19,28 @@ export default function Hero() {
       className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden"
       style={{ background: '#3d0e19' }}
     >
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-         poster="./images/fachada.jpeg"
-        style={{
-          opacity: isLogoHovered ? 1 : 0.45,
-          transition: 'opacity 0.28s ease',
-        }}
-         src="./videos/fachada-predio-boomerang.mp4"
-      />
+      {isMobile ? (
+        <div
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{ backgroundImage: 'url(./images/fachada.jpeg)' }}
+          aria-hidden="true"
+        />
+      ) : (
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="./images/fachada.jpeg"
+          style={{
+            opacity: isLogoHovered ? 1 : 0.45,
+            transition: 'opacity 0.28s ease',
+          }}
+          src="./videos/fachada-predio-boomerang.mp4"
+        />
+      )}
 
       <div
         className="absolute inset-0"
