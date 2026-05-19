@@ -89,30 +89,34 @@ export default function Contato() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block font-sans text-[10px] uppercase tracking-widest mb-1.5" style={{ color: '#6a5a4a' }}>
+                  <label htmlFor="nome" className="block font-sans text-[10px] uppercase tracking-widest mb-1.5" style={{ color: '#6a5a4a' }}>
                     Nome *
                   </label>
                   <input
+                    id="nome"
                     type="text"
                     name="nome"
                     required
                     value={form.nome}
                     onChange={handleChange}
+                    autoComplete="name"
                     placeholder="Seu nome completo"
                     className="input-deboss w-full px-4 py-3 rounded-sm font-sans text-[13px]"
                     style={{ color: '#2a1a0a' }}
                   />
                 </div>
                 <div>
-                  <label className="block font-sans text-[10px] uppercase tracking-widest mb-1.5" style={{ color: '#6a5a4a' }}>
+                  <label htmlFor="telefone" className="block font-sans text-[10px] uppercase tracking-widest mb-1.5" style={{ color: '#6a5a4a' }}>
                     Telefone *
                   </label>
                   <input
+                    id="telefone"
                     type="tel"
                     name="telefone"
                     required
                     value={form.telefone}
                     onChange={handleChange}
+                    autoComplete="tel"
                     placeholder="(48) 99999-9999"
                     className="input-deboss w-full px-4 py-3 rounded-sm font-sans text-[13px]"
                     style={{ color: '#2a1a0a' }}
@@ -121,10 +125,11 @@ export default function Contato() {
               </div>
 
               <div>
-                <label className="block font-sans text-[10px] uppercase tracking-widest mb-1.5" style={{ color: '#6a5a4a' }}>
+                <label htmlFor="interesse" className="block font-sans text-[10px] uppercase tracking-widest mb-1.5" style={{ color: '#6a5a4a' }}>
                   Interesse
                 </label>
                 <select
+                  id="interesse"
                   name="interesse"
                   value={form.interesse}
                   onChange={handleChange}
@@ -140,10 +145,11 @@ export default function Contato() {
               </div>
 
               <div>
-                <label className="block font-sans text-[10px] uppercase tracking-widest mb-1.5" style={{ color: '#6a5a4a' }}>
+                <label htmlFor="mensagem" className="block font-sans text-[10px] uppercase tracking-widest mb-1.5" style={{ color: '#6a5a4a' }}>
                   Mensagem (opcional)
                 </label>
                 <textarea
+                  id="mensagem"
                   name="mensagem"
                   value={form.mensagem}
                   onChange={handleChange}

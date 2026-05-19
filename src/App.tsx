@@ -5,6 +5,7 @@ import Salas from './components/Salas';
 import Diferenciais from './components/Diferenciais';
 import Galeria from './components/Galeria';
 import Localizacao from './components/Localizacao';
+import FAQ from './components/FAQ';
 import Contato from './components/Contato';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
@@ -13,12 +14,13 @@ export default function App() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
         <Salas />
         <Diferenciais />
         <Galeria />
         <Localizacao />
+        <FAQ />
         <Contato />
       </main>
       <Footer />

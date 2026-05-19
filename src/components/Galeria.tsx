@@ -9,10 +9,10 @@ type MediaItem = {
 };
 
 const mediaItems: MediaItem[] = [
-  { id: 1, label: 'Fachada do prédio', tag: 'VÍDEO', src: './videos/fachada-predio.mp4', poster: './fachada.jpeg' },
-  { id: 2, label: 'Térreo', tag: 'VÍDEO', src: './videos/terreo.mp4', poster: './fachada.jpeg' },
-  { id: 3, label: 'Escada interna', tag: 'VÍDEO', src: './videos/escada.mp4', poster: './fachada.jpeg' },
-  { id: 4, label: 'Sala comercial 104', tag: 'VÍDEO', src: './videos/sala-comercial-104.mp4', poster: './fachada.jpeg' },
+  { id: 1, label: 'Fachada do prédio', tag: 'VÍDEO', src: './videos/fachada-predio.mp4', poster: './images/fachada.jpeg' },
+  { id: 2, label: 'Térreo', tag: 'VÍDEO', src: './videos/terreo.mp4', poster: './images/fachada.jpeg' },
+  { id: 3, label: 'Escada interna', tag: 'VÍDEO', src: './videos/escada.mp4', poster: './images/fachada.jpeg' },
+  { id: 4, label: 'Sala comercial 104', tag: 'VÍDEO', src: './videos/sala-comercial-104.mp4', poster: './images/fachada.jpeg' },
 ];
 
 export default function Galeria() {
@@ -152,7 +152,7 @@ export default function Galeria() {
                       </p>
                     </div>
                   </div>
-                ) : (
+                ) : isCurrent ? (
                   <video
                     className="w-full h-full object-cover"
                     autoPlay
@@ -165,6 +165,14 @@ export default function Galeria() {
                     onError={() => {
                       setFailedIds((prev) => (prev.includes(item.id) ? prev : [...prev, item.id]));
                     }}
+                  />
+                ) : (
+                  <img
+                    src={item.poster}
+                    alt={item.label}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 )}
 

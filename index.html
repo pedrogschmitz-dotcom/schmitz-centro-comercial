@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="description" content="Centro Comercial Schmitz — Salas comerciais para locação no Kobrasol, São José/SC. 27 salas, 4 andares, tradição familiar. Seu endereço no Kobrasol." />
+    <meta name="author" content="Centro Comercial Schmitz" />
+    <meta name="theme-color" content="#561525" />
+    <link rel="canonical" href="https://pedrogschmitz-dotcom.github.io/schmitz-centro-comercial/" />
+    <link rel="alternate" href="https://pedrogschmitz-dotcom.github.io/schmitz-centro-comercial/" hreflang="pt-BR" />
     <title>Centro Comercial Schmitz — Seu endereço no Kobrasol</title>
 
     <!-- Open Graph / WhatsApp / Facebook -->
@@ -12,9 +18,10 @@
     <meta property="og:url" content="https://pedrogschmitz-dotcom.github.io/schmitz-centro-comercial/" />
     <meta property="og:title" content="Centro Comercial Schmitz — Seu endereço no Kobrasol" />
     <meta property="og:description" content="Salas comerciais para locação no coração do Kobrasol, São José/SC. 27 salas, 4 andares, tradição familiar desde os anos 80. Agende sua visita." />
-    <meta property="og:image" content="https://pedrogschmitz-dotcom.github.io/schmitz-centro-comercial/fachada.jpeg" />
+    <meta property="og:image" content="https://pedrogschmitz-dotcom.github.io/schmitz-centro-comercial/images/fachada.jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Fachada do Centro Comercial Schmitz no Kobrasol" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Centro Comercial Schmitz" />
 
@@ -22,34 +29,70 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Centro Comercial Schmitz — Seu endereço no Kobrasol" />
     <meta name="twitter:description" content="Salas comerciais para locação no coração do Kobrasol, São José/SC. 27 salas, 4 andares, tradição familiar desde os anos 80." />
-    <meta name="twitter:image" content="https://pedrogschmitz-dotcom.github.io/schmitz-centro-comercial/fachada.jpeg" />
+    <meta name="twitter:image" content="https://pedrogschmitz-dotcom.github.io/schmitz-centro-comercial/images/fachada.jpeg" />
 
-    <!-- Schema.org LocalBusiness -->
+    <!-- Schema.org LocalBusiness + FAQ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Centro Comercial Schmitz",
-      "description": "Salas comerciais para locação no Kobrasol, São José/SC. 27 salas, 4 andares, tradição familiar desde os anos 80.",
-      "url": "https://pedrogschmitz-dotcom.github.io/schmitz-centro-comercial/",
-      "telephone": "+55-48-98468-0088",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Av. Delamar José da Silva, 85",
-        "addressLocality": "São José",
-        "addressRegion": "SC",
-        "postalCode": "88102-101",
-        "addressCountry": "BR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -27.5944397,
-        "longitude": -48.6144903
-      },
-      "image": "https://pedrogschmitz-dotcom.github.io/schmitz-centro-comercial/fachada.jpeg",
-      "sameAs": [
-        "https://www.instagram.com/schmitz.centrocomercial/",
-        "https://www.facebook.com/profile.php?id=61576464735668"
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://pedrogschmitz-dotcom.github.io/schmitz-centro-comercial/#business",
+          "name": "Centro Comercial Schmitz",
+          "description": "Salas comerciais para locação no Kobrasol, São José/SC. 27 salas, 4 andares, tradição familiar desde os anos 80.",
+          "url": "https://pedrogschmitz-dotcom.github.io/schmitz-centro-comercial/",
+          "telephone": "+55-48-98468-0088",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Delamar José da Silva, 85",
+            "addressLocality": "São José",
+            "addressRegion": "SC",
+            "postalCode": "88102-101",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -27.5944397,
+            "longitude": -48.6144903
+          },
+          "image": "https://pedrogschmitz-dotcom.github.io/schmitz-centro-comercial/images/fachada.jpeg",
+          "sameAs": [
+            "https://www.instagram.com/schmitz.centrocomercial/",
+            "https://www.facebook.com/profile.php?id=61576464735668"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pedrogschmitz-dotcom.github.io/schmitz-centro-comercial/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Onde fica o Centro Comercial Schmitz?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O Centro Comercial Schmitz fica na Av. Delamar José da Silva, 85, Kobrasol, São José/SC, CEP 88102-101."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quais tamanhos de salas estão disponíveis?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Há opções de salas padrão entre 35 e 40 m², sala térrea com cerca de 100 m² e ático com mais de 200 m²."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como agendar uma visita?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Você pode agendar visita sem compromisso pelo WhatsApp no número (48) 98468-0088."
+              }
+            }
+          ]
+        }
       ]
     }
     </script>

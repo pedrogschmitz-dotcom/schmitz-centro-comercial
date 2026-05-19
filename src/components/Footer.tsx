@@ -8,7 +8,6 @@ export default function Footer() {
     >
       {/* Linha dourada */}
       <div className="h-px" style={{ background: 'linear-gradient(90deg, transparent, #C9A84C, #E2C47A, #C9A84C, transparent)' }} />
-
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           {/* Marca */}
@@ -36,6 +35,7 @@ export default function Footer() {
                 { href: '#diferenciais', label: 'Diferenciais' },
                 { href: '#galeria', label: 'Galeria' },
                 { href: '#localizacao', label: 'Localização' },
+                { href: '#faq', label: 'FAQ' },
                 { href: '#contato', label: 'Contato' },
               ].map((l) => (
                 <li key={l.href}>

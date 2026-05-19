@@ -32,9 +32,16 @@ export default function Header() {
         backdropFilter: 'blur(6px)',
       }}
     >
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:px-3 focus:py-2 focus:rounded-sm"
+        style={{ background: '#FAF5EC', color: '#561525' }}
+      >
+        Pular para o conteúdo
+      </a>
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex flex-col leading-none group">
+        <a href="#inicio" className="flex flex-col leading-none group" aria-label="Ir para o início">
           <span
             className="font-sans text-[10px] tracking-[0.25em] uppercase"
             style={{ color: '#C9A84C', letterSpacing: '0.25em' }}
@@ -54,7 +61,7 @@ export default function Header() {
         </a>
 
         {/* Nav desktop */}
-        <nav className="hidden md:flex items-center gap-7">
+        <nav className="hidden md:flex items-center gap-7" aria-label="Navegação principal">
           {links.map((l) => (
             <a
               key={l.href}
@@ -67,6 +74,15 @@ export default function Header() {
               {l.label}
             </a>
           ))}
+          <a
+            href="#faq"
+            className="font-sans text-[11px] uppercase tracking-widest transition-colors duration-200"
+            style={{ color: 'rgba(240,228,204,0.8)' }}
+            onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#C9A84C')}
+            onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'rgba(240,228,204,0.8)')}
+          >
+            FAQ
+          </a>
           <a
             href="https://wa.me/5548984680088?text=Olá,%20gostaria%20de%20agendar%20uma%20visita"
             target="_blank"
@@ -93,6 +109,7 @@ export default function Header() {
                 (e.currentTarget as HTMLElement).style.transform = 'scale(1)';
                 (e.currentTarget as HTMLElement).style.boxShadow = '0 2px 6px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2)';
               }}
+              aria-label="Instagram do Centro Comercial Schmitz"
               title="Instagram"
             >
               <svg className="w-4 h-4" fill="white" viewBox="0 0 24 24">
@@ -116,6 +133,7 @@ export default function Header() {
                 (e.currentTarget as HTMLElement).style.transform = 'scale(1)';
                 (e.currentTarget as HTMLElement).style.boxShadow = '0 2px 6px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2)';
               }}
+              aria-label="Facebook do Centro Comercial Schmitz"
               title="Facebook"
             >
               <svg className="w-4 h-4" fill="white" viewBox="0 0 24 24">
@@ -130,6 +148,8 @@ export default function Header() {
           className="md:hidden text-white"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
+          aria-expanded={open}
+          aria-controls="mobile-nav"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -138,13 +158,14 @@ export default function Header() {
       {/* Mobile menu */}
       {open && (
         <div
+          id="mobile-nav"
           className="md:hidden border-t"
           style={{
             background: 'linear-gradient(180deg, #3d0e19 0%, #2a0a13 100%)',
             borderColor: 'rgba(201,168,76,0.3)',
           }}
         >
-          <nav className="flex flex-col px-6 py-4 gap-4">
+          <nav className="flex flex-col px-6 py-4 gap-4" aria-label="Navegação mobile">
             {links.map((l) => (
               <a
                 key={l.href}
@@ -159,6 +180,17 @@ export default function Header() {
                 {l.label}
               </a>
             ))}
+            <a
+              href="#faq"
+              onClick={() => setOpen(false)}
+              className="font-sans text-[12px] uppercase tracking-widest py-2"
+              style={{
+                color: 'rgba(240,228,204,0.85)',
+                borderBottom: '1px solid rgba(201,168,76,0.15)',
+              }}
+            >
+              FAQ
+            </a>
             <a
               href="https://wa.me/5548984680088?text=Olá,%20gostaria%20de%20agendar%20uma%20visita"
               target="_blank"
@@ -179,6 +211,7 @@ export default function Header() {
                   background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                   boxShadow: '0 2px 6px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2)',
                 }}
+                aria-label="Instagram do Centro Comercial Schmitz"
                 title="Instagram"
               >
                 <svg className="w-4 h-4" fill="white" viewBox="0 0 24 24">
@@ -195,6 +228,7 @@ export default function Header() {
                   background: 'linear-gradient(135deg, #1877f2 0%, #0a66c2 100%)',
                   boxShadow: '0 2px 6px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2)',
                 }}
+                aria-label="Facebook do Centro Comercial Schmitz"
                 title="Facebook"
               >
                 <svg className="w-4 h-4" fill="white" viewBox="0 0 24 24">

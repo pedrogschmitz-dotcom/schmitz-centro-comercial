@@ -6,6 +6,7 @@ export default function Hero() {
 
   return (
     <section
+      id="inicio"
       className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden"
       style={{ background: '#3d0e19' }}
     >
@@ -15,7 +16,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
          poster="./images/fachada.jpeg"
         style={{
           opacity: isLogoHovered ? 1 : 0.45,
