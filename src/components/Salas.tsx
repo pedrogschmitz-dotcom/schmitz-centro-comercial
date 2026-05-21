@@ -94,7 +94,7 @@ export default function Salas() {
             className="font-serif text-[38px] md:text-[52px] font-light leading-tight mb-4"
             style={{ color: '#561525' }}
           >
-            Espaço para o seu negócio crescer
+            Salas comerciais para alugar no Kobrasol
           </h2>
           <hr className="gold-divider max-w-[200px] mx-auto mb-6" />
           <p

@@ -118,7 +118,7 @@ export default function Hero() {
           className="font-serif text-[22px] md:text-[32px] font-light italic mb-3 animate-fade-in-up animate-delay-200"
           style={{ color: 'rgba(240,228,204,0.92)' }}
         >
-          Seu endereço no Kobrasol.
+          Salas comerciais para alugar no Kobrasol.
         </p>
 
         <hr className="gold-divider max-w-xs mx-auto mb-6 animate-fade-in-up animate-delay-200" />
@@ -127,8 +127,8 @@ export default function Hero() {
           className="font-sans text-[13px] md:text-[14px] leading-relaxed mb-10 max-w-xl mx-auto animate-fade-in-up animate-delay-300"
           style={{ color: 'rgba(240,228,204,0.7)' }}
         >
-          27 salas comerciais · 4 andares · Av. Delamar José da Silva, 85<br />
-          O único centro comercial da região. Desde os anos 80.
+          Aluguel direto com o proprietário · Kobrasol, São José / SC<br />
+          Av. Delamar José da Silva, 85 · 27 salas · 4 andares · desde os anos 80.
         </p>
 
         {/* CTAs */}

@@ -6,13 +6,14 @@ type MediaItem = {
   tag: string;
   src: string;
   poster: string;
+  alt: string;
 };
 
 const mediaItems: MediaItem[] = [
-  { id: 1, label: 'Fachada do prédio', tag: 'VÍDEO', src: './videos/fachada-predio.mp4', poster: './images/fachada.jpeg' },
-  { id: 2, label: 'Térreo', tag: 'VÍDEO', src: './videos/terreo.mp4', poster: './images/fachada.jpeg' },
-  { id: 3, label: 'Escada interna', tag: 'VÍDEO', src: './videos/escada.mp4', poster: './images/fachada.jpeg' },
-  { id: 4, label: 'Sala comercial 104', tag: 'VÍDEO', src: './videos/sala-comercial-104.mp4', poster: './images/fachada.jpeg' },
+  { id: 1, label: 'Fachada do prédio', tag: 'VÍDEO', src: './videos/fachada-predio.mp4', poster: './images/fachada.jpeg', alt: 'Fachada do Centro Comercial Schmitz na Av. Delamar José da Silva, Kobrasol, São José/SC' },
+  { id: 2, label: 'Térreo', tag: 'VÍDEO', src: './videos/terreo.mp4', poster: './images/fachada.jpeg', alt: 'Corredor térreo do Centro Comercial Schmitz com salas comerciais para alugar em Kobrasol' },
+  { id: 3, label: 'Escada interna', tag: 'VÍDEO', src: './videos/escada.mp4', poster: './images/fachada.jpeg', alt: 'Escada interna do Centro Comercial Schmitz em Kobrasol, São José/SC' },
+  { id: 4, label: 'Sala comercial 104', tag: 'VÍDEO', src: './videos/sala-comercial-104.mp4', poster: './images/fachada.jpeg', alt: 'Interior da sala comercial 104 disponível para locação no Kobrasol' },
 ];
 
 export default function Galeria() {
@@ -143,7 +144,7 @@ export default function Galeria() {
                   >
                     <img
                       src={item.poster}
-                      alt={item.label}
+                      alt={item.alt}
                       className="w-full h-full object-cover opacity-60"
                     />
                     <div className="absolute inset-0 flex items-end justify-center pb-10 px-4 text-center">
@@ -169,7 +170,7 @@ export default function Galeria() {
                 ) : (
                   <img
                     src={item.poster}
-                    alt={item.label}
+                    alt={item.alt}
                     className="w-full h-full object-cover"
                     loading="lazy"
                     decoding="async"

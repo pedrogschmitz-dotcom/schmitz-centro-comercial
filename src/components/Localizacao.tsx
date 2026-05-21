@@ -58,13 +58,21 @@ export default function Localizacao() {
               <p className="font-sans text-[9px] uppercase tracking-[0.3em] mb-2" style={{ color: '#C9A84C' }}>
                 Endereço
               </p>
-              <p className="font-serif text-[20px] font-light leading-snug mb-1" style={{ color: '#561525' }}>
-                Av. Delamar José da Silva, 85
-              </p>
-              <p className="font-sans text-[12px]" style={{ color: '#6a5a4a' }}>
-                Kobrasol · São José / SC<br />
-                CEP 88102-101
-              </p>
+              <address
+                className="not-italic"
+                itemScope
+                itemType="https://schema.org/PostalAddress"
+              >
+                <p className="font-serif text-[20px] font-light leading-snug mb-1" style={{ color: '#561525' }}>
+                  <span itemProp="streetAddress">Av. Delamar José da Silva, 85</span>
+                </p>
+                <p className="font-sans text-[12px]" style={{ color: '#6a5a4a' }}>
+                  <span itemProp="addressLocality">Kobrasol</span> ·{' '}
+                  <span itemProp="addressLocality">São José</span> /{' '}
+                  <span itemProp="addressRegion">SC</span><br />
+                  CEP <span itemProp="postalCode">88102-101</span>
+                </p>
+              </address>
             </div>
 
             {/* Pontos próximos */}
