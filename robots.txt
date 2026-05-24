@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.schmitzkobrasol.com.br/sitemap.xml
+AI-Info: https://www.schmitzkobrasol.com.br/llms.txt
