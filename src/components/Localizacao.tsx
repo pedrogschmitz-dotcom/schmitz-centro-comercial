@@ -67,8 +67,7 @@ export default function Localizacao() {
                   <span itemProp="streetAddress">Av. Delamar José da Silva, 85</span>
                 </p>
                 <p className="font-sans text-[12px]" style={{ color: '#6a5a4a' }}>
-                  <span itemProp="addressLocality">Kobrasol</span> ·{' '}
-                  <span itemProp="addressLocality">São José</span> /{' '}
+                  Kobrasol · <span itemProp="addressLocality">São José</span> /{' '}
                   <span itemProp="addressRegion">SC</span><br />
                   CEP <span itemProp="postalCode">88102-101</span>
                 </p>

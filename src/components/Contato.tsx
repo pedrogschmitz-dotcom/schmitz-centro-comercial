@@ -137,8 +137,9 @@ export default function Contato() {
                   style={{ color: '#2a1a0a' }}
                 >
                   <option value="">Selecione o tipo de sala</option>
-                  <option value="Sala térrea (aprox. 100 m²)">Sala térrea — aprox. 100 m²</option>
-                  <option value="Sala padrão (35–40 m²)">Sala padrão — 35 a 40 m²</option>
+                  <option value="Sala térrea S-104 (35 m²)">Sala térrea S-104 — 35 m²</option>
+                  <option value="Sala comercial S-2A (35–40 m²)">Sala comercial S-2A — 35 a 40 m²</option>
+                  <option value="Sala comercial S-3A (35–40 m²)">Sala comercial S-3A — 35 a 40 m²</option>
                   <option value="Ático (200+ m²)">Ático — 200+ m²</option>
                   <option value="Quero conhecer as opções">Quero conhecer as opções</option>
                 </select>
