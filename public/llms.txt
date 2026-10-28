@@ -11,11 +11,13 @@
 - Modelo de locacao: Direto com o proprietario, sem imobiliaria
 
 ## Fatos principais
-- 27 salas comerciais
-- 4 andares
+- 29 salas comerciais
+- 4 andares, mais o atico
+- Salas a partir de R$1.500 por mes
 - Salas padrao de 35 a 40 m2
 - Opcao de atico com mais de 200 m2
-- Condominio, IPTU e agua inclusos (conforme disponibilidade e condicoes vigentes)
+- Condominio, IPTU e agua inclusos no aluguel; o locatario paga apenas a energia da sua sala
+- Sem elevador; sem estacionamento proprio (estacionamentos rotativos na regiao)
 
 ## Horario de atendimento
 - Segunda a sexta: 08:00-18:00
